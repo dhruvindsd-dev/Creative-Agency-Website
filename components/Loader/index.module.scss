@@ -1,0 +1,36 @@
+.loader {
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.image__container {
+	width: 450px;
+	img {
+		height: auto;
+		display: block;
+	}
+	position: absolute;
+
+	&.image1 {
+		left: 10%;
+		bottom: 10%;
+	}
+	&.image2 {
+		right: 10%;
+		height: 450px;
+		width: 500px;
+		overflow: hidden;
+		top: 5%;
+		z-index: 2;
+	}
+	&.image3 {
+		right: 15%;
+		bottom: 5%;
+		z-index: 4;
+	}
+	&.image4 {
+		left: 15%;
+		top: 15%;
+		z-index: 4;
+	}
+}

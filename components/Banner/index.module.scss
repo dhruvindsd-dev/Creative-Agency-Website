@@ -1,0 +1,46 @@
+@import "../../styles/bulma/sass/utilities/mixins.sass";
+.text {
+	font-size: 15rem;
+	font-weight: 500;
+	color: black;
+	letter-spacing: -1rem;
+	line-height: 19rem;
+	overflow: hidden;
+	position: relative;
+	@include mobile {
+		font-size: 6.5rem;
+		line-height: normal;
+		letter-spacing: 0rem;
+	}
+}
+.row__message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p {
+		width: 400px;
+		font-weight: 500;
+	}
+}
+
+.row__letter {
+	display: inline-block;
+	z-index: 2;
+}
+.scroll__down {
+	position: absolute;
+	top: 0;
+	left: 180px;
+	background-color: white;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	@include mobile {
+		display: none;
+	}
+}
