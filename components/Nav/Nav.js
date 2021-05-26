@@ -13,25 +13,41 @@ function Nav() {
 				<div className="navbar-item">
 					<p className="title">Sleks</p>
 				</div>
-				<div onClick={setIsMenuOpen.bind(this, !IsMenuOpen)} className={`navbar-burger ${IsMenuOpen ? 'is-active' : ''}`}>
+				<div
+					onClick={setIsMenuOpen.bind(this, !IsMenuOpen)}
+					className={`navbar-burger ${IsMenuOpen ? "is-active" : ""}`}>
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</div>
-			<motion.div className="navbar-menu is-active">
+			<motion.div
+				initial={{ height: "0" }}
+				animate={{
+					height: IsMenuOpen ? "auto" : "0",
+					boxShadow: "#c5c5c54a 0px 8px 10px",
+				}}
+				transition={{
+					ease: [0.6, 0.01, -0.05, 0.95],
+					duration: 0.8,
+				}}
+				className="navbar-menu is-active">
 				<div className="navbar-start">
 					<div className="navbar-item">
 						<button className="button is-fullwidth is-light">Design</button>
 					</div>
 					<div className="navbar-item">
-						<button className="button is-fullwidth is-light">Development</button>
+						<button className="button is-fullwidth is-light">
+							Development
+						</button>
 					</div>
 					<div className="navbar-item">
 						<button className="button is-fullwidth is-light">Branding</button>
 					</div>
 					<div className="navbar-item">
-						<button className="button is-fullwidth is-light">Why work with us?</button>
+						<button className="button is-fullwidth is-light">
+							Why work with us?
+						</button>
 					</div>
 				</div>
 				<div className="navbar-end">
