@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 
 function Nav() {
+	const [IsMenuOpen, setIsMenuOpen] = useState(false);
 	return (
 		<motion.nav
 			initial={{ opacity: 0, y: -100 }}
@@ -12,35 +13,35 @@ function Nav() {
 				<div className="navbar-item">
 					<p className="title">Sleks</p>
 				</div>
-				<div className="navbar-burger">
+				<div onClick={setIsMenuOpen.bind(this, !IsMenuOpen)} className={`navbar-burger ${IsMenuOpen ? 'is-active' : ''}`}>
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
 			</div>
-			<div className="navbar-menu">
+			<motion.div className="navbar-menu is-active">
 				<div className="navbar-start">
 					<div className="navbar-item">
-						<button className="button is-light">Design</button>
+						<button className="button is-fullwidth is-light">Design</button>
 					</div>
 					<div className="navbar-item">
-						<button className="button is-light">Development</button>
+						<button className="button is-fullwidth is-light">Development</button>
 					</div>
 					<div className="navbar-item">
-						<button className="button is-light">Branding</button>
+						<button className="button is-fullwidth is-light">Branding</button>
 					</div>
 					<div className="navbar-item">
-						<button className="button is-light">Why work with us?</button>
+						<button className="button is-fullwidth is-light">Why work with us?</button>
 					</div>
 				</div>
 				<div className="navbar-end">
 					<div className="navbar-item">
-						<button className="button is-black is-outlined has-text-weight-medium">
+						<button className="button is-fullwidth is-black is-outlined has-text-weight-medium">
 							Lets work together
 						</button>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</motion.nav>
 	);
 }

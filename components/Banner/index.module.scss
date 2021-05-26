@@ -1,16 +1,37 @@
 @import "../../styles/bulma/sass/utilities/mixins.sass";
+.top__padding {
+	@include mobile {
+		padding-top: 3rem;
+	}
+	@include tablet-only {
+		padding-top: 2rem;
+	}
+}
 .text {
-	font-size: 15rem;
+	font-size: 12.5rem;
 	font-weight: 500;
 	color: black;
-	letter-spacing: -1rem;
-	line-height: 19rem;
+	letter-spacing: -0.8rem;
+	line-height: 16rem;
 	overflow: hidden;
 	position: relative;
 	@include mobile {
-		font-size: 6.5rem;
-		line-height: normal;
+		font-size: 5rem;
+		line-height: 6.5rem;
 		letter-spacing: 0rem;
+		&.small__text {
+			font-size: 3.5rem;
+			line-height: normal;
+		}
+	}
+	@include tablet-only {
+		font-size: 7.5rem;
+		line-height: 10rem;
+		letter-spacing: -0.5rem;
+	}
+	@include desktop-only {
+		font-size: 10rem;
+		line-height: 13rem;
 	}
 }
 .row__message {
@@ -20,6 +41,11 @@
 	p {
 		width: 400px;
 		font-weight: 500;
+	}
+	@include touch {
+		p {
+			width: 300px;
+		}
 	}
 }
 
@@ -42,5 +68,24 @@
 	z-index: 10;
 	@include mobile {
 		display: none;
+	}
+	@include tablet-only {
+		left: 10px;
+		width: 100px;
+		height: 100px;
+		font-size: 0.75rem;
+	}
+	@include desktop-only {
+		left: 75px;
+		width: 125px;
+		height: 125px;
+	}
+	@include widescreen {
+		left: 75px;
+		width: 150px;
+		height: 150px;
+	}
+	@include fullhd {
+		left: 180px;
 	}
 }

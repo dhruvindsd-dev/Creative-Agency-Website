@@ -25,16 +25,11 @@ function Banner() {
 				variants={banner_variants}
 				initial="initial"
 				animate="animate">
-				<p className="marquee">
-					<div className="child">Lorem</div>
-				</p>
-				<div className="row">
-					<div className="columns is-gapless">
-						<div className="column">
-							<p className={Styles.text}>
-								<AnimatedLetters title="Design" />
-							</p>
-						</div>
+				<div className={Styles.top__padding}>
+					<div className="is-flex">
+						<p className={Styles.text}>
+							<AnimatedLetters title="Design" />
+						</p>
 						<motion.div
 							initial={{ opacity: 0, y: 80 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -43,19 +38,19 @@ function Banner() {
 								duration: 1,
 								delay: 0.4,
 							}}
-							className={`column is-hidden-mobile ${Styles.row__message}`}>
-							<p className="is-size-4">
-								Helpings new startups make a professional brand
+							className={`is-flex-grow-1 is-hidden-mobile ${Styles.row__message}`}>
+							<p className="is-size-4-desktop is-size-5-touch">
+								Helpings new startups make a professional brand.
 							</p>
 						</motion.div>
 					</div>
 				</div>
-				<div className="row marquee">
-					<p className={`${Styles.text} has-text-centered`}>
+				<div className="">
+					<p className={`${Styles.text} ${Styles.small__text} has-text-centered`}>
 						<AnimatedLetters title="Development" />
 					</p>
 				</div>
-				<div className="row">
+				<div >
 					<p className={`${Styles.text} has-text-centered`}>
 						<AnimatedLetters title="Branding" />
 					</p>

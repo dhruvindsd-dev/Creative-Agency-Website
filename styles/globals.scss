@@ -15,11 +15,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	img {
-		width: 800px;
+		width: 900px;
 		display: flex;
 	}
 	&.final {
-		top: -8rem;
+		top: -6.5rem;
 		display: block;
 		position: relative;
 		width: 100%;
@@ -31,40 +31,19 @@ body {
 			margin: 0 auto;
 		}
 		@include mobile {
-			top: 0;
+			top: -3.5rem;
 			img {
 				width: 100%;
 			}
+		}
+		@include tablet-only {
+			top: -3.5rem;
+		}
+		@include desktop-only {
+			top: -5rem;
 		}
 	}
 }
 .footer {
 	background-color: hsl(0, 0%, 90%);
-}
-
-.marquee {
-	.child {
-		width: fit-content;
-		display: flex;
-		position: relative;
-		display: inline-block;
-
-		// padding-left: 100%;
-		/* show the marquee just outside the paragraph */
-		will-change: transform;
-		animation: marquee 1s linear infinite;
-	}
-}
-
-.marquee span:hover {
-	animation-play-state: paused;
-}
-
-@keyframes marquee {
-	0% {
-		transform: translate3d(calc(-25% + 10vw), 0, 0);
-	}
-	100% {
-		transform: translate3d(calc(-50% + 10vw), 0, 0);
-	}
 }
