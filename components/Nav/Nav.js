@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 function Nav() {
-	const [IsMenuOpen, setIsMenuOpen] = useState(false);
+	let initialVal;
+	if (typeof window !== "undefined") initialVal = window.innerWidth > 1023;
+	const [IsMenuOpen, setIsMenuOpen] = useState(initialVal);
 	return (
 		<motion.nav
 			initial={{ opacity: 0, y: -100 }}
