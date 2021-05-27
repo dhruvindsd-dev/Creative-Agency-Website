@@ -46,11 +46,20 @@ function Banner() {
 					</div>
 				</div>
 				<div className="">
-					<p className={`${Styles.text} ${Styles.small__text} has-text-centered`}>
-						<AnimatedLetters title="Development" />
+					<p className={`${Styles.text} has-text-centered`}>
+						<div className="marquee">
+							<div className="marquee__content">
+								<div className="marquee__item">
+									<AnimatedLetters title="Development" />
+								</div>
+								<div className="marquee__item">
+									<AnimatedLetters title="Development" />
+								</div>
+							</div>
+						</div>
 					</p>
 				</div>
-				<div >
+				<div>
 					<p className={`${Styles.text} has-text-centered`}>
 						<AnimatedLetters title="Branding" />
 					</p>

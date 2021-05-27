@@ -31,9 +31,9 @@ body {
 			margin: 0 auto;
 		}
 		@include mobile {
-			top: -3.5rem;
+			top: -3rem;
 			img {
-				width: 100%;
+				width: 95%;
 			}
 		}
 		@include tablet-only {
@@ -46,4 +46,29 @@ body {
 }
 .footer {
 	background-color: hsl(0, 0%, 90%);
+}
+.marquee {
+	// width: 100%;
+	overflow: hidden;
+	.marquee__content {
+		width: fit-content;
+		display: flex;
+		list-style: none;
+		animation: scrolling 5s linear infinite;
+		animation-delay: 1.8s;
+		.marquee__item {
+			width: fit-content;
+			padding: 0 12vw;
+			flex-shrink: 0;
+		}
+	}
+}
+@keyframes scrolling {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
 }

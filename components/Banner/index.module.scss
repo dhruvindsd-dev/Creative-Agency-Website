@@ -1,7 +1,7 @@
 @import "../../styles/bulma/sass/utilities/mixins.sass";
 .top__padding {
 	@include mobile {
-		padding-top: 1rem;
+		padding-top: 3rem;
 	}
 	@include tablet-only {
 		padding-top: 1rem;
@@ -15,6 +15,7 @@
 	line-height: 16rem;
 	overflow: hidden;
 	position: relative;
+	white-space: nowrap;
 	@include mobile {
 		font-size: 5rem;
 		line-height: 6.5rem;
